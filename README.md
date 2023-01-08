@@ -34,3 +34,7 @@ Example:
 ```
 ./update.sh chuksudagramproject2 udagram-network-chuks.yml udagram-network-params.json devOps-admin
 ```
+
+### Loadbalancer URL
+
+`http://.chuks-WebAp-RPQ39UD2PJTH-1950042889.us-east-1.elb.amazonaws.com`
