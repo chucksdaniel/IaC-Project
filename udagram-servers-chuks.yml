@@ -7,6 +7,22 @@ Parameters:
       Type: String
 
 Resources:
+   udagramS3ReadOnlyEC2:
+      Type: AWS::IAM::Role
+      Properties:
+         RoleName: !Sub "${EnvironmentName}-Role"
+         AssumeRolePolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+               - Effect: Allow
+                 Principal:
+                    Service:
+                       - ec2.amazonaws.com
+                 Action:
+                    - "sts.AssumeRole"
+         Description: This role allows instances to get the application archive from S3
+         Path: "/"
+
    LBSecGroup:
       Type: AWS::EC2::SecurityGroup
       Properties:
